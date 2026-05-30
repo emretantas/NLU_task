@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+local_scorer/__init__.py
+local_scorer/io_utils.py
+local_scorer/main.py
+local_scorer/metric.txt
+local_scorer/metrics.py
+local_scorer/reference_data/NLU_SharedTask_AV_dev.solution
+local_scorer/reference_data/NLU_SharedTask_ED_dev.solution
+local_scorer/reference_data/NLU_SharedTask_NLI_dev.solution
+nlu_local_scorer.egg-info/PKG-INFO
+nlu_local_scorer.egg-info/SOURCES.txt
+nlu_local_scorer.egg-info/dependency_links.txt
+nlu_local_scorer.egg-info/entry_points.txt
+nlu_local_scorer.egg-info/requires.txt
+nlu_local_scorer.egg-info/top_level.txt
+tests/test_local_scorer.py

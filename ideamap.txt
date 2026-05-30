@@ -1,0 +1,29 @@
+1. Intra-sentence self-attention **ADDED**
+Parikh et al. (2016) "A Decomposable Attention Model for NLI"; Wang & Jiang (2017)
+
+Add a self-attention pass within each sentence before cross-attention, so each token attends to its own sentence first.
+
+2. Label Smoothing
+Szegedy et al. (2016) "Rethinking the Inception Architecture"; Müller et al. (2019)
+
+Replace CrossEntropyLoss with CrossEntropyLoss(label_smoothing=0.1). One-line change.
+
+3. Attention-weighted pooling **ADDED**
+Bahdanau et al. (2015); dos Santos et al. (2016) "Attentive Pooling Networks"
+
+Add a learned attention-weighted sum pooling alongside the existing max+mean in StockClassifier.
+
+4. Variational dropout in BiLSTMs
+Gal & Ghahramani (2016) "A Theoretically Grounded Application of Dropout in RNNs"
+
+Apply the same dropout mask across all timesteps instead of a different one per step — stronger regularisation for LSTMs.
+
+5. Stochastic depth
+Huang et al. (2016) "Deep Networks with Stochastic Depth"
+
+Randomly skip entire ESIM blocks during training (e.g. p=0.1 per block). Strong regulariser for deep residual networks.
+
+6. Highway input projection: **ADDED**
+Srivastava et al. (2015) "Training Very Deep Networks"
+
+Replace the linear input projection with a gated highway network — useful given the heterogeneous 1477-d input.
